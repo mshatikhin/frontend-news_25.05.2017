@@ -6,6 +6,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <style>
+        body, html, section, .shower.full {
+            background: #fff;
+            overflow: inherit;
+        }
+    </style>
 </head>
 <body class="shower list">
 
@@ -17,25 +23,44 @@
         </script>
     </p>
 </header>
+
 <section class="slide" id="cover">
-    <div>
-        <img src="pictures/cover.png" alt="" class="cover">
-    </div>
+    <h2 class="shout" style="letter-spacing: 5px; opacity: 0.5">
+        Новости</h2>
+    <img src="pictures/bayn.png" id="bayn" alt="" class="cover">
+    <script>
+        var baynAnimation = bayn.animate([
+            {
+                transform: 'rotate(0)'
+            },
+            {
+                transform: 'rotate(359deg)'
+            }
+        ], {
+            duration: 4000,
+            iterations: Infinity
+        });
+        baynAnimation.play();
+    </script>
 </section>
 
 <section class="slide">
-    <h2>GitHub Marketplace на диване</h2>
+    <h2>GitHub: базар на диване</h2>
     <ul>
-        <li>Codecov, Codacy, codebeat (CQ, CR)</li>
-        <li>Travis CI, CircleCI, AppVeyor,Percy (CI)</li>
-        <li>Sentry, Blackfire.io, Rollbar (Monitoring)</li>
-        <li>ZenHub, Waffle, Codetree, Zube (PM)</li>
+        <li><b>CQ, CR: </b>Codecov, Codacy, codebeat</li>
+        <li><b>CI:</b> Travis CI, CircleCI, AppVeyor,Percy</li>
+        <li><b>Monitoring:</b> Sentry, Blackfire.io, Rollbar</li>
+        <li><b>PM:</b> ZenHub, Waffle, Codetree, Zube</li>
     </ul>
     <a href="https://github.com/marketplace">Читать</a>
 </section>
 
 <section class="slide">
-    <h2>WebAssembly virtual DOM</h2>
+    <h2>WebAssembly virtual DOM 🦄</h2>
+    <ul>
+        <li>Virtual DOM в WebAssembly</li>
+        <li>Hyper perfomance</li>
+    </ul>
     <a target="_blank" href="https://github.com/mbasso/asm-dom">Читать</a>
 </section>
 
@@ -54,16 +79,48 @@
 </section>
 
 <section class="slide">
-    <h2>Web Animation API</h2>
+    <style>
+        #spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid #e2e2e2;
+            border-top-color: #186aab;
+            margin-left: 20px;
+        }
+    </style>
+    <h2>Web Animation API <span id="spinner"></span></h2>
+    <pre>
+        <code>const spinnerAnimation = spinner.animate([</code>
+        <code>  { transform: 'rotate(0)' },</code>
+        <code>  { transform: 'rotate(359deg)' }</code>
+        <code>], { duration: 1000, iterations: Infinity });</code>
+        <code>&nbsp;</code>
+        <code>spinnerAnimation.play();</code>
+   </pre>
     <a target="_blank" href="http://tutorialzine.com/2017/05/getting-started-with-the-javascript-web-animation-api/">Читать</a>
+
+    <script>
+        var spinnerAnimation = spinner.animate([
+            {
+                transform: 'rotate(0)'
+            },
+            {
+                transform: 'rotate(359deg)'
+            }
+        ], {
+            duration: 1000,
+            iterations: Infinity
+        });
+        spinnerAnimation.play();
+    </script>
 </section>
 
 <section class="slide">
     <h2>ES6 Maps</h2>
     <ul>
         <li>new Map([iterable])</li>
-        <li>Non-Strings as keys</li>
-        <li>2d Arrays to Maps</li>
         <li>get, set, has, size, keys</li>
         <li>forEach, values, entries</li>
     </ul>
@@ -72,7 +129,8 @@
 </section>
 
 <section class="slide">
-    <h2>Create Web Apps Entirely By Writing HTML!</h2>
+    <h2>Mavo</h2>
+    <img src="pictures/comic-opt.gif" width="500" class="place center bottom"/>
     <a target="_blank" href="https://www.smashingmagazine.com/2017/05/introducing-mavo/">Читать</a>
 </section>
 
@@ -80,8 +138,8 @@
     <h2>Новый фронтенд Airbnb</h2>
     <ul>
         <li>Рельсы уехали</li>
-        <li>Супер ускорения с реактом</li>
-        <li>В будующем AMP, PWA, нет легаси</li>
+        <li>Всё реактивно</li>
+        <li>В будущем AMP, PWA</li>
     </ul>
     <img src="pictures/airbnb.gif" class="place right" width="500"/>
     <a target="_blank"
@@ -90,7 +148,7 @@
 
 
 <section class="slide">
-    <h2>Готовим стайлгайды</h2>
+    <h2>SDD - Готовим стайлгайды</h2>
     <a target="_blank" href="https://react-styleguidist.js.org/">react-styleguidist</a>
     <a target="_blank"
        href="https://bradfrost.github.io/style-guide-guide/getting-started.html">style-guide-guide</a>
